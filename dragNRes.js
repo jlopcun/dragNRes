@@ -8,7 +8,7 @@ const dragNRes = (el) =>{
         if(!(e.clientX - Number(el.style.left.slice(0,-2)) <el.clientWidth - 20) && !(e.clientY - Number(el.style.top.slice(0,-2)) < el.clientHeight - 20)) return
         el.addEventListener('mousemove',function drag(e){
             document.getElementById('pepe').textContent = `${el.clientWidth} ${el.clientHeight}`
-            el.style.top = `${e.clientY - el.clientHeight/2}px`
+            el.style.top = `${e.clientY - el.clientHeight}px`
             el.style.left = `${e.clientX - el.clientWidth/2}px`
             el.addEventListener('mouseup',()=>el.removeEventListener('mousemove',drag))
         })
